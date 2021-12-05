@@ -1,0 +1,3 @@
+FROM kong
+
+CMD ["bash"]
