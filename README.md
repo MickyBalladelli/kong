@@ -33,8 +33,10 @@ Test-NetConnection localhost -port 8001
 ```
 
 ### add a service
-```curl -X POST --url http://192.168.99.100:8001/services/ --data 'name=my-api' --data 'url=http://192.168.99.100:8080'
 ```
+curl -X POST --url http://<server>:8001/services/ --data 'name=my-api' --data 'url=http://<backend server>:8080'
+```
+Key: backend server is a fqdn that must be visible from inside the docker container
 
 Response:
 ```
@@ -48,7 +50,7 @@ retries            : 5
 protocol           : http
 port               : 8080
 client_certificate :
-name               : my-api
+name               : restapi
 connect_timeout    : 60000
 tls_verify_depth   :
 read_timeout       : 60000
@@ -62,7 +64,7 @@ PowerShell version see ```add-service.ps1```
 
 ### add a route 
 
-```curl -X POST --url http://192.168.99.100:8001/services/my-api/routes --data 'paths[]=/helloapi'```
+```curl -X POST --url http://<server>:8001/services/rest-api/routes --data 'paths[]=/helloapi'```
 
 Response:
 ```
@@ -71,7 +73,7 @@ https_redirect_status_code : 426
 id                         : b001bebd-dc00-4dc7-8592-03136378eaad
 created_at                 : 1638711537
 updated_at                 : 1638711537
-paths                      : {/helloapi}
+paths                      : {/helloworldapi}
 headers                    :
 destinations               :
 strip_path                 : True
@@ -91,6 +93,10 @@ methods                    :
 
 The Powershell version is at ```add-route.ps1```
 
-### call the API
+### call the API directly
 
-```curl -i http://192.168.99.100:8080/hello```
+```curl -i http://192.168.99.100:8080/hello/world```
+
+### call the API via kong
+
+

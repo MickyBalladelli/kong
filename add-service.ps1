@@ -20,7 +20,7 @@ retries            : 5
 protocol           : http
 port               : 8080
 client_certificate :
-name               : my-api
+name               : rest-api
 connect_timeout    : 60000
 tls_verify_depth   :
 read_timeout       : 60000

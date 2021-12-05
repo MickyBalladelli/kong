@@ -5,8 +5,8 @@ $verb = 'POST'
 $url  = "http://$($server):8001/services/rest-api/routes"
 
 $body = @{
-  name         =  'helloworldapi2'
-  paths        =  '/helloworldapi2'
+  name         =  'helloworldapi'
+  paths        =  '/helloworldapi'
   methods      =  'GET'
 }
 Invoke-RestMethod  -Method $verb -Uri $url -body $body
@@ -17,7 +17,7 @@ https_redirect_status_code : 426
 id                         : b001bebd-dc00-4dc7-8592-03136378eaad
 created_at                 : 1638711537
 updated_at                 : 1638711537
-paths                      : {/helloapi}
+paths                      : {/helloworldapi}
 headers                    :
 destinations               :
 strip_path                 : True
