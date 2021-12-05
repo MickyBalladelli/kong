@@ -5,7 +5,7 @@ $url  = "http://$($server):8001/services/"
 
 $body = @{
   name =  'rest-api'
-  url  =  "http://$($server):5050"
+  url  =  "http://192.168.1.21:5050/hello/world"
 }
 Invoke-RestMethod  -Method $verb -Uri $url -body $body
 
