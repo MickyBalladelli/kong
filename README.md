@@ -1,9 +1,5 @@
 Kong test environment
 
-### Get the image
-
-```docker pull kong```
-
 ## getting started
 ### create kong network
 ```docker network create kong-net```
@@ -18,8 +14,8 @@ docker run --rm --network=kong-net \
 -e "KONG_DATABASE=postgres" -e "KONG_PG_HOST=kong-database" \
 -e "KONG_PG_PASSWORD=kong" kong:latest kong migrations bootstrap
 ```
-### start kong
 
+## start kong
 ```
 docker run -d --name kong --network=kong-net \
 -e "KONG_DATABASE=postgres" -e "KONG_PG_HOST=kong-database" \
