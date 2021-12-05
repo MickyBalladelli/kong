@@ -2,6 +2,6 @@
 
 $server = 'localhost'
 $verb = 'GET'
-$url  = "http://$($server):8080/hello"
+$url  = "http://$($server):5050/hello/world"
 
 Invoke-RestMethod  -Method $verb -Uri $url

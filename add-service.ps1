@@ -4,8 +4,8 @@ $verb = 'POST'
 $url  = "http://$($server):8001/services/"
 
 $body = @{
-  name =  'my-api'
-  url  =  "http://$($server):8080"
+  name =  'rest-api'
+  url  =  "http://$($server):5050"
 }
 Invoke-RestMethod  -Method $verb -Uri $url -body $body
 
