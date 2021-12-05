@@ -2,7 +2,7 @@
 
 $server = 'localhost'
 $verb = 'POST'
-$url  = "http://$($server):8001/services/my-api/routes"
+$url  = "http://$($server):8001/services/rest-api/routes"
 
 $body = @{
   paths =  '/helloapi'

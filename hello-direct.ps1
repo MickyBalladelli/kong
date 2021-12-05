@@ -5,3 +5,10 @@ $verb = 'GET'
 $url  = "http://$($server):5050/hello/world"
 
 Invoke-RestMethod  -Method $verb -Uri $url
+
+
+# curl -i -X GET --url http://192.168.99.100:8000/helloapi/hello/world
+
+$url  = "http://$($server):8000/helloapi"
+
+Invoke-RestMethod  -Method $verb -Uri $url
