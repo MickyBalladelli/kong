@@ -5,8 +5,8 @@ $verb = 'POST'
 $url  = "http://$($server):8001/services/rest-api/routes"
 
 $body = @{
-  name         =  'helloworldapi2'
-  paths        =  '/helloworldapi2'
+  name         =  'helloworldapi'
+  paths        =  '/helloworldapi'
   methods      =  'GET'
 }
 Invoke-RestMethod  -Method $verb -Uri $url -body $body

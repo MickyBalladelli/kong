@@ -33,7 +33,8 @@ Test-NetConnection localhost -port 8001
 ```
 
 ### add a service
-```curl -X POST --url http://192.168.99.100:8001/services/ --data 'name=my-api' --data 'url=http://192.168.99.100:8080'
+```
+curl -X POST --url http://192.168.99.100:8001/services/ --data 'name=my-api' --data 'url=http://192.168.99.100:8080'
 ```
 
 Response:
@@ -91,6 +92,10 @@ methods                    :
 
 The Powershell version is at ```add-route.ps1```
 
-### call the API
+### call the API directly
 
-```curl -i http://192.168.99.100:8080/hello```
+```curl -i http://192.168.99.100:8080/hello/world```
+
+### call the API via kong
+
+
