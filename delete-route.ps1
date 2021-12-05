@@ -2,7 +2,7 @@
 
 $server = 'localhost'
 $verb = 'DELETE'
-$id = 'c1f4e672-dc2f-424c-a669-3311db69f5b0'
-$url  = "http://$($server):8001/services/rest-api/routes/$id"
+$name = '7d366165-de29-48a6-9ead-01643dd9e0ca'
+$url  = "http://$($server):8001/services/rest-api/routes/$name"
 
 Invoke-RestMethod  -Method $verb -Uri $url
