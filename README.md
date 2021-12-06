@@ -99,4 +99,5 @@ The Powershell version is at ```add-route.ps1```
 
 ### call the API via kong
 
+```curl -i http://192.168.99.100:8000/helloworldapi```
 
